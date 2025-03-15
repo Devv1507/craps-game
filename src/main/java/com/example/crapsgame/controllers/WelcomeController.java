@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 
-public class HelloFPOEController {
+public class WelcomeController {
     @FXML
     private TextField nicknameTextField;
     @FXML
@@ -17,6 +17,7 @@ public class HelloFPOEController {
 
     @FXML
     public void onActionFPOEButton(ActionEvent actionEvent){
+        String inputText = nicknameTextField.getText();
         System.out.println("Hello FPOE from FXML");
         count += 1;
         if (count % 2 == 0) {
