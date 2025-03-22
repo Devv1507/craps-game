@@ -1,5 +1,7 @@
 package com.example.crapsgame.controllers;
 
+import com.example.crapsgame.models.AlertBox;
+import com.example.crapsgame.models.AlertBoxInterface;
 import com.example.crapsgame.models.Player;
 import com.example.crapsgame.views.GameView;
 import javafx.event.ActionEvent;
@@ -26,6 +28,10 @@ public class WelcomeController {
         System.out.println(nickname);
         Player player = new Player();
         player.setNickName(nickname);
+
+        // Recommendation for Sudoku alerts
+        AlertBox alertBox = new AlertBox();
+        alertBox.showAlertBox("Are you ready?", "Are you ready?", "Are you ready?");
 
         GameView gameView = GameView.getInstance();
         gameView.show();
