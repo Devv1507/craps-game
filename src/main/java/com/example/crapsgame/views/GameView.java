@@ -16,7 +16,7 @@ public class GameView extends Stage {
         FXMLLoader fxmlLoader = new FXMLLoader(
                 HelloApplication.class.getResource("game-view.fxml")
         );
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load());
         this.controller = fxmlLoader.getController();
         this.setTitle("Craps Game - Welcome!");
         this.setScene(scene);

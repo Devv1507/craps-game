@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crapsgame.controllers.GameController">
    <children>
       <HBox alignment="CENTER" minHeight="50.0" spacing="10.0" style="-fx-background-color: black;">
          <children>
@@ -31,15 +31,16 @@
                   <Label text="ZONA DE JUEGO" />
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                      <children>
-                        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="diceImageView1" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="diceImageView2" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </HBox>
-                  <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" text="Button" />
+                  <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#onActionPlayButton" text="JUGAR" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" style="-fx-border-color: black;" HBox.hgrow="ALWAYS">
                <children>
+                  <Label fx:id="nickNameLabel" text="NICKNAME" />
                   <Label text="RESULTADOS" />
                   <GridPane style="-fx-border-color: black;">
                     <columnConstraints>
@@ -53,7 +54,7 @@
                      <children>
                         <Label alignment="CENTER" text="TIRO" />
                         <Label text="PUNTO" GridPane.rowIndex="1" />
-                        <Label style="-fx-border-color: black;" text="0" GridPane.columnIndex="1">
+                        <Label fx:id="rollScoreLabel" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>

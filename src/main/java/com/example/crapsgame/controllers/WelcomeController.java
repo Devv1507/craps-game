@@ -30,8 +30,8 @@ public class WelcomeController {
         player.setNickName(nickname);
 
         // Recommendation for Sudoku alerts
-        AlertBox alertBox = new AlertBox();
-        alertBox.showAlertBox("Are you ready?", "Are you ready?", "Are you ready?");
+//        AlertBox alertBox = new AlertBox();
+//        alertBox.showAlertBox("Are you ready?", "Are you ready?", "Are you ready?");
 
         GameView gameView = GameView.getInstance();
         gameView.show();
