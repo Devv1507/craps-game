@@ -1,18 +1,10 @@
 package com.example.crapsgame;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import com.example.crapsgame.view.WelcomeView;
+import com.example.crapsgame.views.WelcomeView;
 
 public class HelloApplication extends Application {
     @Override

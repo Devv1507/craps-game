@@ -1,4 +1,4 @@
-package com.example.crapsgame.view;
+package com.example.crapsgame.views;
 
 import com.example.crapsgame.HelloApplication;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +11,10 @@ public class WelcomeView extends Stage {
 
     public WelcomeView() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("hello-view-actionEvent.fxml")
+                HelloApplication.class.getResource("welcome-view.fxml")
         );
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        this.setTitle("Hello!");
+        this.setTitle("Craps Game - Welcome!");
         this.setScene(scene);
     }
 
@@ -22,11 +22,13 @@ public class WelcomeView extends Stage {
         if (WelcomeViewHolder.INSTANCE == null) {
             WelcomeViewHolder.INSTANCE = new WelcomeView();
             return WelcomeViewHolder.INSTANCE;
+        } else {
+            return WelcomeViewHolder.INSTANCE;
         }
-        return WelcomeViewHolder.INSTANCE;
     }
 
     private static class WelcomeViewHolder {
-        public static WelcomeViewHolder INSTANCE;
+        private static WelcomeView INSTANCE;
     }
+
 }
