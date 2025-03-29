@@ -31,6 +31,7 @@ public class GameController {
         Dice dice1 = new Dice();
         Dice dice2 = new Dice();
 
+        // A comment
 //        dice1.roll();
 //        dice2.roll();
 
